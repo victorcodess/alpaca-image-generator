@@ -11,3 +11,73 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.alpaca {
+  position: relative;
+  scale: 0.5;
+  display: none;
+}
+
+.alpaca-accessories {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.alpaca-backgrounds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.alpaca-ears {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.alpaca-eyes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.alpaca-hair {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.alpaca-leg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.alpaca-mouth {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.alpaca-neck {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.alpaca-nose {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
