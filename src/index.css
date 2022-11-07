@@ -186,7 +186,8 @@ code {
   transition: all 0.2s;
 }
 
-.feature-btn:hover {
+.feature-btn:hover,
+.feature-btn_selected {
   cursor: pointer;
   color: #000000;
   background-color: #6246ea;
@@ -194,7 +195,8 @@ code {
   border: 0.1em solid #fffffe;
 }
 
-.style-btn:hover {
+.style-btn:hover,
+.style-bth_selected {
   cursor: pointer;
   color: #000000;
   background-color: #e45858;
