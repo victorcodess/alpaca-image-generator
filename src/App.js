@@ -21,27 +21,7 @@ function App() {
     setState(() => newState);
   };
 
-  const handleSelectItem = (itemName) => {
-    const dirIndex = state.findIndex((dir) => dir.selected);
-    if (dirIndex === -1) return;
-    1234;
-
-    const newDir = {
-      ...state[dirIndex],
-    };
-    newDir.items.forEach((item) => (item.selected = false));
-    const itemIndex = newDir.items.findIndex((item) => item.label === itemName);
-
-    const newItem = { ...newDir.items[itemIndex], selected: true };
-    newDir.items[itemIndex] = newItem;
-
-    setState((prevState) => {
-      const newState = [...prevState];
-      newState[dirIndex] = newDir;
-
-      return newState;
-    });
-  };
+  const handleSelectItem = (itemName) => {};
 
   return (
     <div>
@@ -51,7 +31,7 @@ function App() {
           <Preview />
         </div>
         <div className="right">
-          <Buttons />
+          <Buttons onSelectDir={handleSelectDir} alpacaState={state} />
         </div>
       </div>
     </div>

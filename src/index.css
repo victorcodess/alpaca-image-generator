@@ -170,6 +170,22 @@ code {
   transition: all 0.2s;
 }
 
+.feature-btn-selected {
+  border: none;
+  padding: 12px 30px;
+  background-color: #6246ea;
+  color: #2b2c34;
+  margin: 5px 5px;
+  border-radius: 100px;
+  border: 0.15em solid #2b2c34;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  transition: all 0.2s;
+}
+
 .style-btn {
   border: none;
   padding: 12px 30px;
@@ -192,7 +208,7 @@ code {
   color: #000000;
   background-color: #6246ea;
   color: #fffffe;
-  border: 0.1em solid #fffffe;
+  border: 0.15em solid #fffffe;
 }
 
 .style-btn:hover,
@@ -201,5 +217,5 @@ code {
   color: #000000;
   background-color: #e45858;
   color: #fffffe;
-  border: 0.1em solid #fffffe;
+  border: 0.15em solid #fffffe;
 }

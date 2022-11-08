@@ -1,23 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import alpacaDatabase from "../alpacaData";
 
-const Buttons = (props) => {
-  const [feature, setFeature] = useState({});
-
-  const handleSetDir = (feature) => {
-    setFeature(() => feature);
-  };
+const Buttons = ({ onSelectDir, alpacaState }) => {
+  const item = useMemo(() => {}, [alpacaState]);
 
   return (
     <div className="right">
       <div className="feature-control">
         <h2 className="feature-btn-header">ACCESSORISE THE ALPACA'S</h2>
         <div className="feature-btn-wrapper">
-          {alpacaDatabase.map((feature, index) => (
+          {alpacaState.map((feature, index) => (
             <button
               key={index}
-              className="feature-btn"
-              onClick={() => handleSetDir(feature)}
+              className={
+                feature.selected ? "feature-btn-selected" : "feature-btn"
+              }
+              onClick={() => onSelectDir(feature.label)}
             >
               {feature.label}
             </button>
