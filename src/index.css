@@ -47,7 +47,7 @@ code {
 }
 
 .alpaca {
-  width: 370px;
+  width: 455px;
   margin: 0;
   position: relative;
   aspect-ratio: 1;
@@ -56,6 +56,7 @@ code {
 .alpaca img {
   width: 100%;
   height: 100%;
+  border-radius: 3px;
 }
 
 .alpaca-accessories {
@@ -207,10 +208,11 @@ code {
 .controls-btns {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin: 20px 10px;
+  padding: 0;
+  margin-top: 20px;
 }
 
 .randomize-btn {
@@ -222,9 +224,9 @@ code {
   color: #fffffe;
   background: #2b2c34;
   font-family: "Jost", sans-serif;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 700;
-  padding: 12px 50px;
+  padding: 15px 57px;
   text-align: center;
   transition-duration: 0.15s;
   transition-property: all;
@@ -246,9 +248,9 @@ code {
   color: #fffffe;
   background: #2b2c34;
   font-family: "Jost", sans-serif;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 700;
-  padding: 12px 50px;
+  padding: 15px 57px;
   text-align: center;
   transition-duration: 0.15s;
   transition-property: all;

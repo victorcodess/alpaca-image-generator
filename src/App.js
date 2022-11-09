@@ -47,6 +47,7 @@ function App() {
       newDir.items[itemIndex] = newItem;
 
       newState[dirIndex] = newDir;
+
       return newState;
     });
   };
@@ -56,7 +57,7 @@ function App() {
       <Header />
       <div className="container">
         <div className="left">
-          <Preview />
+          <Preview alpacaState={state} />
           <Controls />
         </div>
         <div className="right">
