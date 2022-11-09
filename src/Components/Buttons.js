@@ -1,8 +1,11 @@
 import React, { useState, useMemo } from "react";
-import alpacaDatabase from "../alpacaData";
 
-const Buttons = ({ onSelectDir, alpacaState }) => {
-  const item = useMemo(() => {}, [alpacaState]);
+const Buttons = ({ onSelectDir, onSelectItem, alpacaState }) => {
+  const items = useMemo(() => {
+    const selectedDir = alpacaState.find((dir) => dir.selected);
+    if (!selectedDir) return;
+    return selectedDir.items;
+  }, [alpacaState]);
 
   return (
     <div className="right">
@@ -13,7 +16,9 @@ const Buttons = ({ onSelectDir, alpacaState }) => {
             <button
               key={index}
               className={
-                feature.selected ? "feature-btn-selected" : "feature-btn"
+                feature.selected
+                  ? "feature-btn_selected feature-btn"
+                  : "feature-btn"
               }
               onClick={() => onSelectDir(feature.label)}
             >
@@ -26,9 +31,15 @@ const Buttons = ({ onSelectDir, alpacaState }) => {
       <div className="style-control">
         <h2 className="style-btn-header">STYLE</h2>
         <div className="style-btn-wrapper">
-          {Object.keys(feature).length
-            ? feature.items.map((item, index) => (
-                <button key={index} className="style-btn">
+          {items
+            ? items.map((item, index) => (
+                <button
+                  key={index}
+                  className={
+                    item.selected ? "style-btn_selected style-btn" : "style-btn"
+                  }
+                  onClick={() => onSelectItem(item.label)}
+                >
                   {item.label}
                 </button>
               ))

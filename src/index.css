@@ -27,7 +27,7 @@ code {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left;
+  align-items: center;
   margin-left: 0px;
 }
 
@@ -35,7 +35,7 @@ code {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left;
+  align-items: center;
   margin-top: 0px;
 }
 
@@ -47,7 +47,7 @@ code {
 }
 
 .alpaca {
-  width: 400px;
+  width: 370px;
   margin: 0;
   position: relative;
   aspect-ratio: 1;
@@ -170,22 +170,6 @@ code {
   transition: all 0.2s;
 }
 
-.feature-btn-selected {
-  border: none;
-  padding: 12px 30px;
-  background-color: #6246ea;
-  color: #2b2c34;
-  margin: 5px 5px;
-  border-radius: 100px;
-  border: 0.15em solid #2b2c34;
-  box-sizing: border-box;
-  font-family: "Jost", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  text-align: center;
-  transition: all 0.2s;
-}
-
 .style-btn {
   border: none;
   padding: 12px 30px;
@@ -208,14 +192,71 @@ code {
   color: #000000;
   background-color: #6246ea;
   color: #fffffe;
-  border: 0.15em solid #fffffe;
+  border: 0.15em solid #6246ea;
 }
 
 .style-btn:hover,
-.style-bth_selected {
+.style-btn_selected {
   cursor: pointer;
   color: #000000;
-  background-color: #e45858;
+  background-color: #6246ea;
   color: #fffffe;
-  border: 0.15em solid #fffffe;
+  border: 0.15em solid #6246ea;
+}
+
+.controls-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: 20px 10px;
+}
+
+.randomize-btn {
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border: 0.15em solid #2b2c34;
+  border-radius: 3px;
+  color: #fffffe;
+  background: #2b2c34;
+  font-family: "Jost", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 12px 50px;
+  text-align: center;
+  transition-duration: 0.15s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.randomize-btn:hover {
+  color: #fffffe;
+  border: 0.15em solid #e45858;
+  background: #e45858;
+}
+
+.download-btn {
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border: 0.15em solid #2b2c34;
+  border-radius: 3px;
+  color: #fffffe;
+  background: #2b2c34;
+  font-family: "Jost", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 12px 50px;
+  text-align: center;
+  transition-duration: 0.15s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.download-btn:hover {
+  color: #fffffe;
+  border: 0.15em solid #e45858;
+  background: #e45858;
 }
