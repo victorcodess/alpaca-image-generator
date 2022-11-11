@@ -29,7 +29,7 @@ const Buttons = ({ onSelectDir, onSelectItem, alpacaState }) => {
       </div>
 
       <div className="style-control">
-        <h2 className="style-btn-header">STYLE</h2>
+        <h2 className="style-btn-header">STYLES</h2>
         <div className="style-btn-wrapper">
           {items
             ? items.map((item, index) => (

@@ -1,9 +1,11 @@
 import React from "react";
 
-const Controls = () => {
+const Controls = ({ alpacaData, onRandomize }) => {
   return (
     <div className="controls-btns">
-      <button className="randomize-btn">Randomize</button>
+      <button className="randomize-btn" onClick={() => onRandomize()}>
+        Randomize
+      </button>
       <button className="download-btn">Download</button>
     </div>
   );

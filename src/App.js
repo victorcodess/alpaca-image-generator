@@ -52,14 +52,33 @@ function App() {
     });
   };
 
+  const randomizeImage = () => {
+    setState((prevState) => {
+      const findRandomIndex = (dir) => {
+        return Math.floor(Math.random() * dir.items.length);
+      };
+      return prevState.map((dir) => {
+        const randomIndex = findRandomIndex(dir);
+        return {
+          ...dir,
+          items: dir.items.map((item, index) => ({
+            ...item,
+            selected: randomIndex === index,
+          })),
+        };
+      });
+    });
+  };
+
   return (
     <div>
       <Header />
       <div className="container">
         <div className="left">
           <Preview alpacaState={state} />
-          <Controls />
+          <Controls onRandomize={randomizeImage} alpacaState={state} />
         </div>
+        {/* <pre>{JSON.strzingify(state, null, 2)}</pre> */}
         <div className="right">
           <Buttons
             onSelectDir={handleSelectDir}
