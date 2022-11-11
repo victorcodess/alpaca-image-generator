@@ -2,10 +2,12 @@ import "./App.css";
 import Header from "./Components/Header";
 import Preview from "./Components/Preview";
 import Buttons from "./Components/Buttons";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 // database
 import alpacaData from "./alpacaData";
 import Controls from "./Components/Controls";
+import { toPng } from "html-to-image";
+import download from "downloadjs";
 
 function App() {
   const [state, setState] = useState(alpacaData);
@@ -70,13 +72,31 @@ function App() {
     });
   };
 
+  const downloadImage = () => {
+    const alpacaPreview = document.querySelector(".alpaca");
+    alpacaPreview.style.width = "878px";
+    const alpacaCanvasNode = document.getElementById("alpaca");
+    toPng(alpacaCanvasNode)
+      .then((dataUrl) => {
+        download(dataUrl, "my-alpaca.png");
+        alpacaPreview.style.width = "455px";
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <div>
       <Header />
       <div className="container">
         <div className="left">
           <Preview alpacaState={state} />
-          <Controls onRandomize={randomizeImage} alpacaState={state} />
+          <Controls
+            onRandomize={randomizeImage}
+            onDownload={downloadImage}
+            alpacaState={state}
+          />
         </div>
         {/* <pre>{JSON.strzingify(state, null, 2)}</pre> */}
         <div className="right">

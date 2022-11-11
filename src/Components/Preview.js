@@ -1,8 +1,8 @@
-import React, { useMemo, useState } from "react";
+import React from "react";
 
 const Preview = ({ alpacaState }) => {
   return (
-    <div className="alpaca">
+    <div className="alpaca" id="alpaca">
       {alpacaState.map((dir) => {
         const item = dir.items.find((item) => item.selected);
         if (!item) return null;
