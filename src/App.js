@@ -2,7 +2,7 @@ import "./App.css";
 import Header from "./Components/Header";
 import Preview from "./Components/Preview";
 import Buttons from "./Components/Buttons";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 // database
 import alpacaData from "./alpacaData";
 import Controls from "./Components/Controls";
@@ -92,11 +92,7 @@ function App() {
       <div className="container">
         <div className="left">
           <Preview alpacaState={state} />
-          <Controls
-            onRandomize={randomizeImage}
-            onDownload={downloadImage}
-            alpacaState={state}
-          />
+          <Controls onRandomize={randomizeImage} onDownload={downloadImage} />
         </div>
         {/* <pre>{JSON.strzingify(state, null, 2)}</pre> */}
         <div className="right">
