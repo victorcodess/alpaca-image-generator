@@ -20,4 +20,4 @@ The biggest obsatcle I encountered during this project was maintaining the state
 
 ## Leassons Learned
 
-I could spend all day describing the lessons I learnt while working on this project, but the most importsnt ones involved my newfound undewrstanding of useState hook and using external libraries. I also learned a lot about code sturcture and modifying Javascript objects in React.
+I could spend all day describing the lessons I learnt while working on this project, but the most important ones involved my newfound understanding of the useState hook and using external libraries. I also learnt a lot about code structure and modifying Javascript objects in React.
